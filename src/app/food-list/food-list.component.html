@@ -1,0 +1,32 @@
+<div class="col-sm-6" *ngFor="let dish of dishList">
+    <div class="card dish-item">
+      <div class="dish-image">
+          <img class="card-img-top" src="{{dish.image}}" alt="Card image">
+      </div>
+      <div class="card-body dish-content">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="card-title"><b>{{dish.name}}</b></h4>
+          </div>
+          <div class="col-sm-6">
+            <h5><span>Rs </span>{{dish.rate}}</h5>
+          </div>
+        </div>
+
+        <p class="card-text">{{dish.description}}</p>
+        <div class="row dish-bottom text-center">
+          <div class="col-sm-2">
+            <div class="hq-circle" title="Health Quotient">
+              <p>{{dish.hq}}</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <h4>{{dish.type}}</h4>
+          </div>
+          <div class="col-sm-4">
+            <button class="btn btn-primary" (click)="chosenDish(dish)"><span><i class="fa fa-shopping-cart"></i></span> Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
