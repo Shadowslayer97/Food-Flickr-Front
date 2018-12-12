@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class FoodListComponent implements OnInit {
 
-  private foodList: any = [];
-  private pageNumber: number = 1;
-  private showLoader: boolean = false;
+  public foodList: any = [];
+  public pageNumber: number = 1;
+  public showLoader: boolean = false;
 
   constructor(private _foreignService: ForeignService,private _sharedService: SharedService,private router: Router) { }
 

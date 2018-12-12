@@ -11,10 +11,10 @@ import { ForeignService } from '../foreign.service';
 })
 export class FoodIndividualComponent implements OnInit {
 
-  private subscriber: Subscription;
-  private chosenFood: any = {};
-  private userReview: any = {};
-  private initialStars: number = 0;
+  public subscriber: Subscription;
+  public chosenFood: any = {};
+  public userReview: any = {};
+  public initialStars: number = 0;
 
   constructor(private _sharedService: SharedService, private _foreignService: ForeignService) { }
 
