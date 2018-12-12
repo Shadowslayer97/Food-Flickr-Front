@@ -12,17 +12,19 @@ export class ForeignService {
     params: {
       api_key:'c28c40210d45d354468a989246cd4b54',
       format:'json',
-      nojsoncallback:'1'
+      nojsoncallback:'1',
+      per_page:'30'
     }
   }
 
   constructor(private http: HttpClient) { }
 
-  getDishPics(userParams:any): Observable<any> {
+  getDishPics(pageNumber:number): Observable<any> {
     const API_URL = environment.flickrUrl;
     this.flickrParams.params['method'] = 'flickr.photos.search';
     this.flickrParams.params['tags'] = 'food';
     this.flickrParams.params['text'] = 'food';
+    this.flickrParams.params['page'] = pageNumber.toString();
     return this.http.get<any>(API_URL,this.flickrParams);
   }
 

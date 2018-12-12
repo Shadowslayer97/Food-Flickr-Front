@@ -13,7 +13,7 @@
 }
 
 .food-image {
-  width:390px;
+  /* width:390px; */
   height:240px;
 }
 
@@ -29,4 +29,31 @@
 
 .food-list:hover {
   border-color: grey;
+}
+
+.pages {
+  margin:15px;
+}
+
+.prev-page {
+  float: left;
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next-page {
+  float: right;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.page-link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.page-link:hover {
+  background-color: #ddd;
+  color: black;
 }

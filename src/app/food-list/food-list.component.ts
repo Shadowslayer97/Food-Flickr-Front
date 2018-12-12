@@ -11,12 +11,17 @@ import { Router } from '@angular/router';
 export class FoodListComponent implements OnInit {
 
   private foodList: any = [];
+  private pageNumber: number = 1;
 
   constructor(private _foreignService: ForeignService,private _sharedService: SharedService,private router: Router) { }
 
   ngOnInit() {
     console.log("work");
-    this._foreignService.getDishPics({}).subscribe(result => {
+    this.getFoodList();
+  }
+
+  getFoodList() {
+    this._foreignService.getDishPics(this.pageNumber).subscribe(result => {
       console.log(result);
       this.foodList = result.photos.photo;
     })
