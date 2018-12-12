@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { FoodListComponent } from '../food-list/food-list.component';
+import { FoodIndividualComponent } from '../food-individual/food-individual.component';
 
 const appRoutes: Routes = [
   {
@@ -11,6 +12,10 @@ const appRoutes: Routes = [
     path: "",
     redirectTo: "/food",
     pathMatch: "full"
+  },
+  {
+    path: "item",
+    component: FoodIndividualComponent
   }
 ];
 
