@@ -26,11 +26,8 @@ export class FoodListComponent implements OnInit {
     return this._foreignService.formFlickrData(food);
   }
 
-  getInitialStars(id:string): number {
-    if(localStorage.getItem('pid'+id)!=null) {
-      return JSON.parse(localStorage.getItem('pid'+id)).reviewStars;
-    }
-    else return 0;
+  checkAlreadyReviewed(id:string): number {
+    return this._sharedService.getInitialStars(id);
   }
 
   foodSelected(food:any) {

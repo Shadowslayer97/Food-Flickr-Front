@@ -37,6 +37,18 @@ export class ForeignService {
     return 'http://farm'+food.farm+'.static.flickr.com/'+food.server+'/'+food.id+'_'+food.secret+'.jpg';
   }
 
+  createToast(message:string, backgroundColor:string) {
+    console.log("tst");
+    let snackbar = document.getElementById("snackbar");
+    console.log(snackbar);
+    snackbar.className = "showToast";
+    snackbar.style.background = backgroundColor || "#000";
+    snackbar.innerHTML = message;
+    setTimeout(() => {
+      snackbar.className = snackbar.className.replace("showToast", "");
+    }, 3000);
+  }
+
   // postRequest(url:string, body:any): Observable<any> {
   //   const API_URL = environment.apiUrl.concat(url);
   //   return this.http.post<any>(API_URL,body);

@@ -9,7 +9,7 @@
           <div class="card-body food-content">
             <div class="row">
               <div class="col-sm-12">
-                <ngx-stars [readonly]="true" [size]="2" [maxStars]="10" [initialStars]="getInitialStars(food.id)"></ngx-stars>
+                <ngx-stars [readonly]="true" [size]="2" [maxStars]="10" [initialStars]="checkAlreadyReviewed(food.id)"></ngx-stars>
               </div>
             </div>
         </div>

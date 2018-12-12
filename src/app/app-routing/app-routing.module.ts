@@ -16,6 +16,9 @@ const appRoutes: Routes = [
   {
     path: "item",
     component: FoodIndividualComponent
+  },
+  { path:'**' ,
+  redirectTo: '/login'
   }
 ];
 
