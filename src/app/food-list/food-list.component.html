@@ -10,6 +10,14 @@
       </div>
     </div>
   </div>
+  <div class="col-sm-12">
+    <div class="page-no">
+      <p> Page number: {{pageNumber}}</p>
+    </div>
+  </div>
+  <div class="col-sm-12 food-list">
+    <div class="loader" *ngIf="showLoader"> </div>
+  </div>
   <div class="col-sm-4 food-list" *ngFor="let food of foodList">
       <div class="card food-item">
         <a href="javascript:void(0);" (click)="foodSelected(food)">

@@ -1,4 +1,6 @@
 
+/* Food Card css */
+
 .food-item {
   width:50%;
   height:50%;
@@ -32,6 +34,8 @@
   margin:10px;
   float: right;
 }
+
+/*  Toast Message css */
 
 #snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
