@@ -1,0 +1,28 @@
+<div class="card food-item">
+  <h3>{{chosenFood.title._content}}</h3>
+  <div class="food-image">
+    <img class="card-img-top" [src]="getImageUrl()" alt="Card image">
+  </div>
+  <div class="card-body food-content">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="col-sm-6">
+          <h4>By: {{chosenFood.owner.realname}}</h4>
+        </div>
+        <div class="col-sm-6">
+          <h4>Taken: {{chosenFood.dates.taken}}</h4>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <ngx-stars [size]="3" (ratingOutput)="onRatingSet($event)" [maxStars]="10"></ngx-stars>
+      </div>
+      <div class="col-sm-12">
+        <label for="reviewText"> Your opinion : </label>
+        <textarea class="form-control rounded-0" name="reviewText" [(ngModel)]="userReview.reviewText" rows="5"></textarea>
+      </div>
+      <div class="col-sm-12">
+        <button type="button" class="btn btn-primary" (click)="createPhotoReview()" name="button">Create Review</button>
+      </div>
+    </div>
+  </div>
+</div>

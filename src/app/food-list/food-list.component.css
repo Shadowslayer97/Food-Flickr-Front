@@ -1,27 +1,27 @@
 
-.dish-item {
+.food-item {
   width:400px;
   height:500px;
   overflow: hidden;
   margin: 10px;
 }
 
-.dish-image {
+.food-image {
   width:100%;
   height:50%;
 }
 
-.dish-image img {
+.food-image img {
   height:100%;
   width:100%;
   display:block;
 }
 
-.dish-content {
+.food-content {
   height:50%;
 }
 
-.dish-bottom {
+.food-bottom {
   margin-bottom: 0px;
 }
 
