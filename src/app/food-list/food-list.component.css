@@ -1,4 +1,6 @@
 
+/* Food List css */
+
 .food-list {
   display: flex;
   justify-content: center;
@@ -13,7 +15,7 @@
 }
 
 .food-image {
-  width:390px;
+  /* width:390px; */
   height:240px;
 }
 
@@ -29,4 +31,52 @@
 
 .food-list:hover {
   border-color: grey;
+}
+
+/* Pagination css */
+
+.pages {
+  margin:15px;
+}
+
+.prev-page {
+  float: left;
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next-page {
+  float: right;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.page-link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.page-link:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.page-no {
+  text-align: center;
+}
+
+/* Loader css  */
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
