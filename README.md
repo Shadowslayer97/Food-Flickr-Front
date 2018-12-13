@@ -1,6 +1,6 @@
 # PhotoFlickrFront
 
-## Breif
+## Brief
 
 PhotoFlickrFront is an angular 6 application that uses flickr api to display photos with tags or title matching with 'food'.
 Each photo can be opened individually and user can provide hus/her own review/rating of the photo.
